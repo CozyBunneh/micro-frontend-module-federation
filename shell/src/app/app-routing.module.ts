@@ -1,26 +1,35 @@
 import { loadRemoteModule } from '@angular-architects/module-federation';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent,
+    loadChildren: () =>
+      loadRemoteModule({
+        type: 'module',
+        remoteEntry: 'http://localhost:4202/remoteEntry.js',
+        exposedModule: './Module',
+      }).then((m) => m.StartModule),
   },
-  // {
-    // path: '',
-    // loadChildren: () =>
-      // loadRemoteModule({
-      //   type: 'module',
-      //   remoteEntry: 'http://localhost:4201/remoteEntry.js',
-      //   exposedModule: './Module',
-      // }).then((m) => m.LayoutModule),
-  // },
-  // {
-  //   path: '',
-  //   loadChildren: () => import('layout/Module').then((m) => m.LaoutModule)
-  // },
+  {
+    path: 'contact',
+    loadChildren: () =>
+      loadRemoteModule({
+        type: 'module',
+        remoteEntry: 'http://localhost:4203/remoteEntry.js',
+        exposedModule: './Module',
+      }).then((m) => m.ContactModule),
+  },
+  {
+    path: 'about',
+    loadChildren: () =>
+      loadRemoteModule({
+        type: 'module',
+        remoteEntry: 'http://localhost:4204/remoteEntry.js',
+        exposedModule: './Module',
+      }).then((m) => m.AboutModule),
+  },
 ];
 
 @NgModule({

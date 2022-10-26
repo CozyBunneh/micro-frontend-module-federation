@@ -6,12 +6,10 @@ const {
 module.exports = withModuleFederationPlugin({
   name: 'layout',
 
-  // exposes: {
-  //   './Module': './src/app/modules/layout/layout.module.ts',
-  // },
   exposes: {
     './Header': './src/app/modules/layout/header/header.component.ts',
-    // Footer: './src/app/modules/layout/footer/footer.component.ts',
+    './Footer': './src/app/modules/layout/footer/footer.component.ts',
+    './SideNav': './src/app/modules/layout/side-nav/side-nav.component.ts',
   },
 
   // shared: { // Only works when running via the shell

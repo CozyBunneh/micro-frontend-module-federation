@@ -15,6 +15,16 @@ export const environment = {
           displayName: 'Header',
           componentName: 'HeaderComponent',
         },
+        {
+          exposedModule: './Footer',
+          displayName: 'Footer',
+          componentName: 'FooterComponent',
+        },
+        {
+          exposedModule: './SideNav',
+          displayName: 'SideNav',
+          componentName: 'SideNavComponent',
+        },
       ],
     },
   ],

@@ -1,7 +1,12 @@
-<div>
-  <h1>Shell</h1>
-  <p>----</p>
-  <header #header></header>
-  <p>----</p>
-  <router-outlet></router-outlet>
+<div class="layout">
+  <div class="header">
+    <ng-template #header></ng-template>
+  </div>
+  <ng-template #sidenav class="sidenav"></ng-template>
+  <div class="main">
+    <div class="container">
+      <router-outlet></router-outlet>
+    </div>
+    <ng-template #footer class="footer"></ng-template>
+  </div>
 </div>

@@ -1,0 +1,40 @@
+.header {
+  grid-area: header;
+}
+
+.sidenav {
+  grid-area: menu;
+  height: 100%;
+
+  &> div {
+    height: 100%;
+  }
+}
+
+.main {
+  grid-area: main;
+  overflow: auto;
+}
+
+.container {
+  margin: 2rem;
+}
+
+.footer {
+}
+
+.layout {
+  display: grid;
+  grid-template-areas:
+    'header header'
+    'menu main';
+  grid-template-rows: max-content auto;
+  grid-template-columns: max-content auto;
+  //gap: 10px;
+  //background-color: #2196F3;
+  height: 100vh;
+
+  &> div {
+    padding: 0;
+  }
+}
