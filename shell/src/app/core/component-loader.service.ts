@@ -48,8 +48,6 @@ export class ComponentLoaderService {
         }
       }
     }
-
-    console.log(`components: ${JSON.stringify(this.components)}`);
   }
 
   private getComponentOptionsByName(
