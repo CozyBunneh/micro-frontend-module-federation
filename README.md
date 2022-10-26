@@ -1,4 +1,4 @@
-# mifro-frontend-module-federation 🏳️‍⚧️🏳️‍🌈
+# micro-frontend-module-federation 🏳️‍⚧️🏳️‍🌈
 
 🏳️‍⚧️🏳️‍🌈 Micro frontend Angular example using Module Federation 🏳️‍⚧️🏳️‍🌈
 
